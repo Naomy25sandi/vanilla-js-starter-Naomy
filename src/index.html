@@ -5,10 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ejemplo básico</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<h1>La aplicación esta corriendo!</h1>
+	<main>
+  <h1>Lista de Tareas</h1>
+  <br>
+ <div id="container">
+	<div id="containerBtn">
+       <input type="text" id="task-input" placeholder="Ingresa una tarea" /><br>
+        <button id="add-task">Agregar tarea</button><br><br>
+	</div>
+	<div>
+		<p>Tareas completadas</p>
+		<input class="add-task2" id="task-count" type="number">
+	</div>
+  </div>
+  <div id="task-list"></div>
+	<script src="index.js"></script>
+</main>	
 
 	<script src="./index.js" type="module"></script>
 </body>
