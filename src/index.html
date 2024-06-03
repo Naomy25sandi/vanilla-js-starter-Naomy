@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ejemplo básico</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<h1>La aplicación esta corriendo!</h1>
+  <h1>Lista de Tareas</h1>
+  <input type="text" id="task-input" placeholder="Ingresa una tarea" />
+  <button id="add-task">Agregar</button>
+  <div id="task-count">0 tareas</div>
+  <div id="task-list"></div>
 
-	<script src="./index.js" type="module"></script>
+ 
+	<script src="index.js"></script>
 </body>
 
 </html>
