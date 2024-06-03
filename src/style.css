@@ -9,4 +9,10 @@
  .task button {
       margin-left: 10px;
     }
+
     
+    #task-list{
+    width: 700px;
+    height: 500px;
+    border: 1px black;
+    }
