@@ -9,7 +9,7 @@ main{
 }
 h1{
   text-align: center;
-  color: rgb(176, 41, 86);
+  color: rgb(104, 99, 101);
 }
 #task-list{
   
@@ -40,4 +40,7 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#task-input{
+  padding: 10px 10px;
 }
