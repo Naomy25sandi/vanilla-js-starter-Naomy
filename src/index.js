@@ -4,7 +4,7 @@ const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
     const taskCountElement = document.getElementById('task-count');
 
-    let taskCount = [];
+    let taskCount = 0;
 
     function addTask() {
       const taskText = taskInput.value.trim();
