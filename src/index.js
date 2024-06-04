@@ -8,3 +8,13 @@ addTaskButton.addEventListener('click', function (e) {
   e.preventDefault()
 });
 
+async function task() {
+  try {
+    const respuesta = await fetch("")
+    let task = await respuesta.json()
+    console.log(task);
+  } catch (error) {
+    console.log(error);
+  }
+  
+}
