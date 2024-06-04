@@ -21,11 +21,12 @@ async function postT() {
   })
   let datos = await respuesta.json()
   console.log(datos);
+  getTask()
 } catch (error) {
   console.log(error)
 }
 }
-addTaskButton.addEventListener("click",getTask)
+addTaskButton.addEventListener("click",postT)
 
 async function getTask() {
   taskList.innerHTML = ""
@@ -35,18 +36,25 @@ async function getTask() {
     task.forEach(element=>{// para recorrer mis datos
       let div = document.createElement("div")
       let checkBox= document.createElement("input")
+      let p = document.createElement('p')
       checkBox.type= "checkbox"
-      let del = document.createElement('btndelete')
+      let del = document.createElement('button')
      del.innerHTML= "eliminar"
-     let p = document.createElement('p')
      p.innerHTML = element.nombre
      p.appendChild(del)
      p.appendChild(checkBox)
      div.appendChild(p)
      taskList.appendChild(div)
+     
   })
     console.log(task);
   } catch (error) {
     console.log(error);
   }
 }
+getTask()
+
+//del.addEventListener('click', ()=>{
+
+//}
+//)
