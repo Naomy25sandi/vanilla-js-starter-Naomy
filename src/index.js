@@ -37,6 +37,7 @@ async function getTask() {
       let div = document.createElement("div")
       let checkBox= document.createElement("input")
       let p = document.createElement('p')
+      p.classList.add("parrafo")
       checkBox.type= "checkbox"
       let del = document.createElement('button')
      del.innerHTML= "eliminar"
