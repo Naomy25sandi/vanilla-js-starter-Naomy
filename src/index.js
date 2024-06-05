@@ -1,10 +1,10 @@
-
-
 // Inserte el código aquí
 const taskInput = document.getElementById('task-input');
 const addTaskButton = document.getElementById('add-task');
 const taskList = document.getElementById('task-list');
 const taskCountElement = document.getElementById('task-count');
+const addTaskButton2 = document.getElementById('task-count');
+
 
 
 async function postT() {
@@ -87,7 +87,7 @@ async function deleteTask(id) {
 
 
 //put 
-async function updateTask(id) {
+async function updateTask(id) {// se llama la funcion para el checkbox
   try{
     let task ={
       estado:true
@@ -105,3 +105,4 @@ async function updateTask(id) {
     console.error(error);
   }
 }
+
