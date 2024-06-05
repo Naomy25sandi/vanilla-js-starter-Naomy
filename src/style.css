@@ -12,9 +12,8 @@ h1{
   color: rgb(104, 99, 101);
 }
 #task-list{
-  
-  height: 500px;
-  border: 1px solid black;
+  min-height: 400px;  /*Para agregarle un minimo al cuadro*/
+  border: 2px solid black;
 }
 #add-task{
   padding: 10px 10px;

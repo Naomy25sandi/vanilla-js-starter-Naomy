@@ -6,6 +6,11 @@ const taskCountElement = document.getElementById('task-count');
 const addTaskButton2 = document.getElementById('task-count');
 
 
+taskInput.addEventListener("keydown",(e)=>{
+  if (e.key=="Enter") {
+    postT()
+  }
+})
 
 async function postT() {
   try {
@@ -55,6 +60,14 @@ async function getTask() {
      p.appendChild(checkBox)
      div.appendChild(p)
      taskList.appendChild(div)
+     checkBox.addEventListener("click", ()=>{
+      if (checkBox.checked==true) {
+        updateTask(element.id)
+          taskCountElement.value++
+      }else{
+        taskCountElement.value--
+      }
+  })
      
   })
     console.log(task);
@@ -73,10 +86,10 @@ async function deleteTask(id) {
   });
   if (response.ok) {
     await getTask();
-    console.log("Tarea eliminada con exito")
+    alert("Tarea eliminada con exito")
     
   } else {
-    console.log("Error al eliminar la tarea")
+    alert("Error al eliminar la tarea")
   }
   } catch (error) {
     console.log(error);
