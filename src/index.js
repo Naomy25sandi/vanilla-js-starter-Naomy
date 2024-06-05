@@ -41,6 +41,10 @@ async function getTask() {
       checkBox.type= "checkbox"
       let del = document.createElement('button')
      del.innerHTML= "eliminar"
+     del.addEventListener('click',()=>{
+      
+      deleteTask(element.id) // llamar la funcion delete
+      })
      p.innerHTML = element.nombre
      p.appendChild(del)
      p.appendChild(checkBox)
@@ -54,8 +58,37 @@ async function getTask() {
   }
 }
 getTask()
+ 
+//delete
+//url delete http://localhost:3000/api/task/id
+async function deleteTask(id) {
+  try {
+    const response = await fetch (`http://localhost:3000/api/task/${id}`,{
+    method: "DELETE"
+  });
+  if (response.ok) {
+    await getTask();
+    console.log("Tarea eliminada con exito")
+    
+  } else {
+    console.log("Error al eliminar la tarea")
+  }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-//del.addEventListener('click', ()=>{
 
+
+
+//put 
+//async function updateTask(id) {
+  // try{
+    //let task ={
+
+   // }
+  //} catch (error){
+
+  //}
+  
 //}
-//)
