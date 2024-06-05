@@ -1,3 +1,5 @@
+
+
 // Inserte el código aquí
 const taskInput = document.getElementById('task-input');
 const addTaskButton = document.getElementById('add-task');
@@ -12,27 +14,28 @@ async function postT() {
     nombre: taskInput.value,
     estado:false
   }
-  const respuesta = await fetch ("http://localhost:3000/api/task",{
+  const response = await fetch ("http://localhost:3000/api/task",{
     method:"POST",
     headers: {
       "Content-type": "application/json"
     },
     body: JSON.stringify(tarea)
   })
-  let datos = await respuesta.json()
+  let datos = await response.json()
   console.log(datos);
   getTask()
 } catch (error) {
   console.log(error)
 }
 }
+
 addTaskButton.addEventListener("click",postT)
 
 async function getTask() {
   taskList.innerHTML = ""
   try {
-    const respuesta = await fetch("http://localhost:3000/api/task")
-    let task = await respuesta.json();
+    const response = await fetch("http://localhost:3000/api/task")
+    let task = await response.json();
     task.forEach(element=>{// para recorrer mis datos
       let div = document.createElement("div")
       let checkBox= document.createElement("input")
@@ -42,8 +45,10 @@ async function getTask() {
       let del = document.createElement('button')
      del.innerHTML= "eliminar"
      del.addEventListener('click',()=>{
-      
       deleteTask(element.id) // llamar la funcion delete
+      })
+      checkBox.addEventListener("click",()=>{
+        updateTask(element.id)
       })
      p.innerHTML = element.nombre
      p.appendChild(del)
@@ -82,13 +87,21 @@ async function deleteTask(id) {
 
 
 //put 
-//async function updateTask(id) {
-  // try{
-    //let task ={
-
-   // }
-  //} catch (error){
-
-  //}
-  
-//}
+async function updateTask(id) {
+  try{
+    let task ={
+      estado:true
+   }
+    const response = await fetch (`http://localhost:3000/api/task/${id}`,{
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(task)
+  })
+  let data = await response.json()
+  console.log(data);
+  } catch (error){
+    console.error(error);
+  }
+}
