@@ -21,9 +21,6 @@ async function deleteTask(id) {
     }
   }
   
-  
-  
-  
   //put 
   async function updateTask(id) {// se llama la funcion para el checkbox
     try{
@@ -43,6 +40,6 @@ async function deleteTask(id) {
       console.error(error);
     }
   }
- export{updateTask}
-  export{deleteTask}
+ export{updateTask} // funcion del ckaeckbox
+  export{deleteTask} // fincion de borrar
 
