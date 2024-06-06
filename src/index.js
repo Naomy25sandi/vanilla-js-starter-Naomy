@@ -4,7 +4,7 @@ const addTaskButton = document.getElementById('add-task');
 const taskList = document.getElementById('task-list');
 const taskCountElement = document.getElementById('task-count');
 const addTaskButton2 = document.getElementById('task-count');
-
+import { postT } from "./index2";
 
 taskInput.addEventListener("keydown",(e)=>{
   if (e.key=="Enter") {
@@ -12,35 +12,16 @@ taskInput.addEventListener("keydown",(e)=>{
   }
 })
 
-async function postT() {
-  try {
-  let tarea ={
-    id:Date.now(),
-    nombre: taskInput.value,
-    estado:false
-  }
-  const response = await fetch ("http://localhost:3000/api/task",{
-    method:"POST",
-    headers: {
-      "Content-type": "application/json"
-    },
-    body: JSON.stringify(tarea)
-  })
-  let datos = await response.json()
-  console.log(datos);
-  getTask()
-} catch (error) {
-  console.log(error)
-}
-}
 
-addTaskButton.addEventListener("click",postT)
 
+//buton agregar se hace el evento del click 
+addTaskButton.addEventListener("click",postT)// 
+              // funcion de agregar datos 
 async function getTask() {
-  taskList.innerHTML = ""
+  taskList.innerHTML = ""  // donde se almacena los datos
   try {
-    const response = await fetch("http://localhost:3000/api/task")
-    let task = await response.json();
+    const response = await fetch("http://localhost:3000/api/task") // se hace la peticion de la promesa.
+    let task = await response.json();  
     task.forEach(element=>{// para recorrer mis datos
       let div = document.createElement("div")
       let checkBox= document.createElement("input")
@@ -75,7 +56,7 @@ async function getTask() {
     console.log(error);
   }
 }
-getTask()
+getTask()// funcion de get
  
 //delete
 //url delete http://localhost:3000/api/task/id
@@ -119,3 +100,4 @@ async function updateTask(id) {// se llama la funcion para el checkbox
   }
 }
 
+export {getTask}
