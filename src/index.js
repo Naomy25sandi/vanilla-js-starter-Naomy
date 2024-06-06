@@ -3,13 +3,13 @@ const taskInput = document.getElementById('task-input');
 const addTaskButton = document.getElementById('add-task');
 const taskList = document.getElementById('task-list');
 const taskCountElement = document.getElementById('task-count');
-const addTaskButton2 = document.getElementById('task-count');
+
 import { postT } from "./index2";
 import { deleteTask } from "./index3";
 import { updateTask } from "./index3";
 
 taskInput.addEventListener("keydown",(e)=>{
-  if (e.key=="Enter") {
+  if (e.key=="Enter" && taskInput.value!="") {
     postT()
   }
 })
@@ -17,7 +17,11 @@ taskInput.addEventListener("keydown",(e)=>{
 
 
 //buton agregar se hace el evento del click 
-addTaskButton.addEventListener("click",postT)// 
+addTaskButton.addEventListener("click",function () {
+  if (taskInput.value!="") {
+    postT()
+  }
+})// 
               // funcion de agregar datos 
 async function getTask() {
   taskList.innerHTML = ""  // donde se almacena los datos
