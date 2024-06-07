@@ -16,8 +16,9 @@ h1{
   color: rgb(16, 15, 15);
 }
 #task-list{
-  min-height: 400px;  /*Para agregarle un minimo al cuadro*/
+  min-height: 500px;  /*Para agregarle un minimo al cuadro*/
   border: 2px solid black;
+  border-radius: 10px;
 }
 #add-task{
   padding: 10px 10px;
@@ -55,6 +56,10 @@ h1{
   margin-top: 15px;
   cursor: pointer;
 }
+#noHay{
+  display: flex;
+  
+}
 
 #noHay{
   display: none;
@@ -76,3 +81,4 @@ h1{
   background-color:rgb(204, 135, 107)
   
 }
+
