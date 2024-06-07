@@ -6,6 +6,8 @@ body{
   margin: 0;
   height: 100vh;
   background-color:#f2f2f2;
+  background: #833ab4;
+  background: linear-gradient( to right, #833ab4, #fd1d9c);/* para agregar 2 colores juntos*/
 }
 main{
   width: 1200px;
@@ -17,27 +19,26 @@ h1{
 }
 #task-list{
   min-height: 500px;  /*Para agregarle un minimo al cuadro*/
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 10px;
 }
 #add-task{
   padding: 10px 10px;
   background-color: rgb(99, 148, 148);
   border-radius: 10px;
+  border: 2px solid white;
 }
-
 
 .add-task2{
   border-radius: 50%;
+  border: 2px solid white;
   width: 50px;
   height: 50px;
- 
 }
 #containerBtn {
   display: grid;
   grid-template-columns: auto;
-  
-  
+   
 }
 #container{
   display: flex;
@@ -46,6 +47,7 @@ h1{
 }
 #task-input{
   padding: 10px 10px;
+  border: 3px solid white;
 }
 #roundBorder {
   border-radius: 5px;
@@ -81,4 +83,15 @@ h1{
   background-color:rgb(204, 135, 107)
   
 }
-
+#noHay{
+  
+  margin-top: -300;
+  text-align: center;
+  font-size: larger;
+}
+*:first-letter {
+  text-transform: capitalize;
+}
+#task-input{
+  border-radius: 10px;
+}
