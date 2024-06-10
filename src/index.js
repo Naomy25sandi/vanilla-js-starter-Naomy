@@ -11,7 +11,7 @@ import { updateTask } from "./index3";
 
 // la funcion para que agreguen tareas con el enter y que no se agreguen tareas vacias al hacer enter//
 taskInput.addEventListener("keydown",(e)=>{
-  if (e.key=="Enter" && taskInput.value!="") {
+  if (e.key=="Enter" && taskInput.value!="" && taskInput.value.trim()) {
     postT()
   }
 })
@@ -20,7 +20,7 @@ taskInput.addEventListener("keydown",(e)=>{
 
 //buton agregar se hace el evento del click 
 addTaskButton.addEventListener("click",function () {
-  if (taskInput.value!="") {
+  if (taskInput.value!="" &&  taskInput.value.trim()) { //se agrega la funcion 
     postT()
   }
 })// 
