@@ -9,17 +9,29 @@
 </head>
 
 <body>
+	<main>
   <h1>Lista de Tareas</h1>
   <br>
-  <div id="container">
-  <input type="text" id="task-input" placeholder="Ingresa una tarea" />
-  <button id="add-task">Agregar</button>
+ <section id="container">
+	<section id="containerBtn">
+       <input type="text" id="task-input" placeholder="Ingresa una tarea" /><br><!--donde se agregan las tareas-->
+        <button id="add-task">Agregar tarea</button><br><br><!--boton de agregar las tareas-->
+	</section>
+	<aside class="ct">
+		<p>Tareas completadas</p>
+		<input class="add-task2" id="task-count" type="number"><!--Input del contador-->
+	</section>
+  </aside>
   
-  <div id="task-count">0 tareas</div>
-  <div id="task-list"></div>
+  <div id="task-list">
+ </div>
+<p id="noHay">No hay tareas</p> <!--Se crea el p con el contenido de No hay tareas, esta etiqueta se le coloca un display none en el css 
+									El display none hace que este no se vea.-->
+    
+	<script type="module" src="index.js"></script>
+</main>	 
 
-</div>
-	<script src="index.js"></script>
+	
 </body>
 
 </html>
