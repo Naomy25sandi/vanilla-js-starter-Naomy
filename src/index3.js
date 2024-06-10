@@ -40,6 +40,6 @@ async function deleteTask(id) {
       console.error(error);
     }
   }
- export{updateTask} // funcion del ckaeckbox
+ export{updateTask} // funcion del checkbox
   export{deleteTask} // fincion de borrar
 
