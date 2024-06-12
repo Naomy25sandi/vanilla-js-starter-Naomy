@@ -34,7 +34,7 @@ async function deleteTask(id) {
         },
         body: JSON.stringify(task)
     })
-    let data = await response.json()
+    let datos = await response.json()
     console.log(data);
     } catch (error){
       console.error(error);
@@ -43,3 +43,4 @@ async function deleteTask(id) {
  export{updateTask} // funcion del checkbox
   export{deleteTask} // fincion de borrar
 
+''

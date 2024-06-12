@@ -22,11 +22,12 @@ h1{
   border: 2px solid white;
   border-radius: 10px;
 }
-#add-task{
+.contieneT{
   padding: 10px 10px;
   background-color: rgb(99, 148, 148);
   border-radius: 10px;
   border: 2px solid white;
+  align-items: center;
 }
 
 .add-task2{

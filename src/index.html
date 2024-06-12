@@ -3,31 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ejemplo básico</title>
+	<title>Practica</title>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 	<main>
-  <h1>Lista de Tareas</h1>
-  <br>
- <section id="container">
-	<section id="containerBtn">
-       <input type="text" id="task-input" placeholder="Ingresa una tarea" /><br><!--donde se agregan las tareas-->
-        <button id="add-task">Agregar tarea</button><br><br><!--boton de agregar las tareas-->
-	</section>
-	<aside class="ct">
-		<p>Tareas completadas</p>
-		<input class="add-task2" id="task-count" type="number"><!--Input del contador-->
-	</section>
-  </aside>
-  
-  <div id="task-list">
- </div>
-<p id="noHay">No hay tareas</p> <!--Se crea el p con el contenido de No hay tareas, esta etiqueta se le coloca un display none en el css 
-									El display none hace que este no se vea.-->
-    
+		<div class="contieneT">
+			<div class="form-content">
+				<h1 id="title"> Registro</h1>
+				<form action="">
+					<div class="input-group" >
+
+						<input id="Nombre" type="text" placeholder="Nombre">
+					 </div>
+                     <div class="input-field">
+                        
+                        <input type="email" placeholder="correo" id="email">
+                     </div>
+					 <div class="input-field" >
+                    
+                        <input id="contraseña" type="password" placeholder="contraseña">
+                     </div>
+					 
+                     <div class="btn-field">
+						<button id="singUp" type="button">Registrarse</button>
+						<button id="singIn" type="button" class="disable">Iniciar Sesion</button>
+		
+					</div>
+				</form>
+			</div>
+		</div>
 	<script type="module" src="index.js"></script>
 </main>	 
 
