@@ -8,7 +8,7 @@ async function postT() { // funcion post
       nombre: taskInput.value, //input donde se agrega la tarea//
       estado:false
     }
-    const response = await fetch ("http://localhost:3000/api/task",{
+    const response = await fetch ("http://localhost:3001/api/task",{
       method:"POST",
       headers: {
         "Content-type": "application/json"

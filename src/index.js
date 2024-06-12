@@ -23,12 +23,12 @@ addTaskButton.addEventListener("click",function () {
   if (taskInput.value!="" &&  taskInput.value.trim()) { //se agrega la funcion 
     postT()
   }
-})// 
+})// ss
               // funcion de agregar datos 
 async function getTask() {
   taskList.innerHTML = ""  // donde se almacena los datos
   try {
-    const response = await fetch("http://localhost:3000/api/task") // se hace la peticion de la promesa.
+    const response = await fetch("http://localhost:3001/api/task") // se hace la peticion de la promesa.
     let task = await response.json();
     let taskA = Array.from(task) /* Pasamos la variable task a un arreglo llamado taskA, lo convertimos usando Array.from(task)
                                    Validamos la longitud de este arreglo usando .lenght SI es 0, se le coloca el display block al p que se creo

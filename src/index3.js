@@ -6,7 +6,7 @@ import { getTask } from ".";
 //url delete http://localhost:3000/api/task/id
 async function deleteTask(id) {
     try {
-      const response = await fetch (`http://localhost:3000/api/task/${id}`,{
+      const response = await fetch (`http://localhost:3001/api/task/${id}`,{
       method: "DELETE"
     });
     if (response.ok) {
@@ -27,7 +27,7 @@ async function deleteTask(id) {
       let task ={
         estado:true
      }
-      const response = await fetch (`http://localhost:3000/api/task/${id}`,{
+      const response = await fetch (`http://localhost:3001/api/task/${id}`,{
         method: "PUT",
         headers: {
           "Content-type": "application/json"
