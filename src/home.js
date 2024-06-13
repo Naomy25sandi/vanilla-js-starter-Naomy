@@ -9,5 +9,6 @@ let pNombre = document.getElementById("nombre")
     pNombre.innerHTML=nombreUsuario
 
 btnCambiarContra.addEventListener("click",async()=>{
-
+    updateTask(id)
+   
 })

@@ -38,7 +38,7 @@ async function getUsuarios() {
 // put
 async function actualizaDatos(idUsuario) {
   try{
-    let  ={
+    let actualizar={
       estado:true
    }
     const response = await fetch (`http://localhost:3001/api/task/${idUsuario}`,{
