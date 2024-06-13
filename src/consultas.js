@@ -20,7 +20,7 @@ async function postData(nuevoUsuario) {
 //get
 async function getUsuarios() {
   try {
-    let response = await fetch ('http://localhost:3001/api/task',{
+    let response = await fetch('http://localhost:3001/api/task',{
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -36,6 +36,24 @@ async function getUsuarios() {
 }
 
 // put
+async function actualizaDatos(idUsuario) {
+  try{
+    let  ={
+      estado:true
+   }
+    const response = await fetch (`http://localhost:3001/api/task/${idUsuario}`,{
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(task)
+  })
+  let datos = await response.json()
+  console.log(data);
+  } catch (error){
+    console.error(error);
+  }
+}
 
 
 export{getUsuarios,postData}

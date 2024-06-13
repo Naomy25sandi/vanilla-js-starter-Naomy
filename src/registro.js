@@ -18,6 +18,7 @@ btnSingUp.addEventListener("click",function () {
     email : email.value,
     contra : contra.value
   }
+  window.location.href="/login.html"
 postData(nuevoUsuario)
 })
 
